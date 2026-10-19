@@ -1,3 +1,4 @@
+#include <climits>
 #include <iostream>
 int main() {
     const double repeated = 0.0;
@@ -8,4 +9,8 @@ int main() {
     std::cout.precision(17);
     std::cout << "double 10 x 0.1 = " << total << '\n';
     std::cout << "exact integer-tenths result / 10 = " << static_cast<double>(integerTenths) / 10.0 << '\n';
+    std::cout << "sizeof(bool)=" << sizeof(bool) << " sizeof(char)=" << sizeof(char)
+              << " sizeof(int)=" << sizeof(int) << " sizeof(long long)=" << sizeof(long long)
+              << " sizeof(float)=" << sizeof(float) << " sizeof(double)=" << sizeof(double) << '\n';
+    std::cout << "INT_MAX=" << INT_MAX << " LLONG_MAX=" << LLONG_MAX << '\n';
 }
