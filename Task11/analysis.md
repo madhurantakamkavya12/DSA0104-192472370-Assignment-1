@@ -1,0 +1,4 @@
+## Task 11 — Recommendation (4)
+
+Retain the core OO model, modify fare policy behind one `FareTable`/fare-calculation interface, and store all balances and fares as `long long` paise. Use `enum class`, `constexpr` parameters, private card balance, checked recharge/debit, and deterministic boundary tests. A fare revision changes a centralized table/rule and its tests. Limitations: hard-coded rules require recompilation; concession eligibility, rounding policy, refund behavior, pass validity, and transaction persistence need explicit requirements. For 3 million trips the computation remains O(n) overall and O(1) per trip; memory per card is O(1). A config file adds O(z) startup work and O(z) memory for z fares, but lets operations revise values without recompiling; validation/versioning and malformed-file handling become necessary. For stable educational fare rules, compile-time constants are simpler; production operations may prefer validated configuration.
+
