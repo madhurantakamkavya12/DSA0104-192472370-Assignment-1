@@ -1,6 +1,6 @@
 # DSA01 Assignment 1 — working draft
 
-**Student:** [Madhurantakam Kavya]  
+**Student:** Madhurantakam Kavya  
 **Register number:** [192472370]  
 **Repository:** [https://github.com/madhurantakamkavya12/DSA0104-192472370-Assignment-1]  
 **Compiler:** g++ 16.2.0 (MSYS2 UCRT64)  
@@ -182,6 +182,8 @@ Worked examples: Airport weekday peak = Rs 60 + 20% = Rs 72.00. Airport weekend 
 - Commit progressively, at least one commit per task; do not fabricate historical commits.
 - Submit the working repository URL on the report cover and in the assignment portal.
 - Be ready to explain each calculation and edit a boundary case during viva.
+
+
 
 
 

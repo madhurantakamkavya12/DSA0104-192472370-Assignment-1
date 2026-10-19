@@ -1,6 +1,6 @@
 # DSA0104 Assignment 1 — Namma Metro Fare System
 
-- **Name:** [fill in your full name]
+- **Name:** Madhurantakam Kavya
 - **Register number:** 192472370
 - **GitHub repository:** [DSA0104-192472370-Assignment-1](https://github.com/madhurantakamkavya12/DSA0104-192472370-Assignment-1)
 - **Compiler:** g++ 16.2.0 (MSYS2 UCRT64)
@@ -51,6 +51,8 @@ For Task 8, run the program and enter `abc`, then `9`, to demonstrate recovery f
 
 ## Finish before submission
 
-1. Replace `[fill in your full name]` here and in the report.
+1. Confirm the name and register number on the cover page.
 2. Confirm the student/senior concession amount and eligibility with your instructor. The pasted brief mentions a concession but does not specify its value or rule; document the confirmed rule or explicitly record the assumption if no further detail is available.
 3. Confirm the screenshots and updated report appear on GitHub, then submit the repository link and report through the course portal.
+
+
