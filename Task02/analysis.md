@@ -1,0 +1,6 @@
+## Task 2 — Tokens and constants (3)
+
+Example tokens in `FareSystem.h`: keyword `constexpr`, identifier `MIN_REMAINING_PAISE`, literal constant `5000`, operator `>=`, punctuator `{` or `;`. `#define` performs textual substitution without type or scope; `const` makes an object immutable; `constexpr` additionally requires compile-time evaluation when possible. Use `constexpr` for fixed fares, percentages and thresholds so type checking and compile-time evaluation apply. `enum class Zone` scopes zone names and disallows accidental implicit conversion to integers; a plain `enum` permits more implicit conversions and may leak enumerators into surrounding scope. Identifiers use descriptive lower camel case for functions/variables and uppercase snake case for constants; they cannot start with a digit, contain spaces, or be a keyword.
+
+**Alternative and complexity:** Replacing typed constants/enums with macros removes type checking and scope and can cause precedence surprises (for example a macro expression lacking parentheses). A macro itself occupies no storage; a `constexpr` object usually needs no runtime storage when optimized/constant-folded. Runtime complexity is unchanged (O(1) lookup/computation); an array of fares uses O(z) static storage for z zones.
+
