@@ -26,4 +26,17 @@ int main() {
     const std::array<long long,5> five{1000,2400,3000,3600,1000};
     long long total = 0; for (long long f : five) total += f;
     std::cout << "five trip total=" << money(total) << '\n';
+
+    bool unknownZoneRejected = false;
+    try {
+        (void)fare(static_cast<Zone>(99), false);
+    } catch (const std::invalid_argument&) {
+        unknownZoneRejected = true;
+    }
+    std::cout << "unknown zone rejected=" << std::boolalpha << unknownZoneRejected << '\n';
+
+    SmartCard rechargeCard(10000);
+    const bool negativeRechargeAccepted = rechargeCard.recharge(-500);
+    std::cout << "negative recharge accepted=" << negativeRechargeAccepted
+              << " balance=" << money(rechargeCard.balance()) << '\n';
 }
