@@ -60,7 +60,7 @@ C 67
 s >= u
 ```
 
-`a / b` is integer division (both operands are `int`) and produces 3 before conversion to `double`; casting `a` first produces 3.5. `'A' + 2` promotes the character to `int`, adds 2, then converts back to `char` (`C` on ASCII-compatible systems); `ch + 1` promotes `char` back to int and prints 67. Integer 5 converts to bool true; default bool output is `1`, and `boolalpha` prints `true`. Comparing `-1` and unsigned 1 converts the signed operand to unsigned; the converted value is large, so `s < u` is false. Signed/unsigned comparisons commonly trigger `-Wsign-compare`.
+`a / b` is integer division (both operands are `int`) and produces 3 before conversion to `double`; casting `a` first produces 3.5. `'A' + 2` promotes the character to `int`, adds 2, then converts back to `char` (`C` on ASCII-compatible systems); `ch + 1` promotes `char` back to int and prints 68 (because `C` is 67 in this execution character set, then 1 is added). Integer 5 converts to bool true; default bool output is `1`, and `boolalpha` prints `true`. Comparing `-1` and unsigned 1 converts the signed operand to unsigned; the converted value is large, so `s < u` is false. Signed/unsigned comparisons commonly trigger `-Wsign-compare`. **Observed with g++ 16.2.0:** output was `3 3.5`, `C 68`, `1 true`, `s >= u`; the compiler emitted `-Wsign-compare` for comparing `s` (`int`) with `u` (`unsigned int`). The prediction above said `C 67`; that was my mistake. The actual result is 68 because `ch + 1` promotes `ch` to an integer and then adds 1. Preserve that discrepancy and explain it as a corrected prediction, rather than claiming the prediction matched.
 
 Brace initialization `int x{3.7};` is ill-formed because it narrows; `static_cast<double>(a)` makes the intended conversion explicit. Implicit conversions rarely change asymptotic time or memory. Explicit casts improve readability but do not make a bad conversion safe; range validation is still required. A corrected style uses `static_cast` at intentional boundaries and signed types for values that can be negative.
 
@@ -148,3 +148,5 @@ Worked examples: Airport weekday peak = Rs 60 + 20% = Rs 72.00. Airport weekend 
 - Commit progressively, at least one commit per task; do not fabricate historical commits.
 - Submit the working repository URL on the report cover and in the assignment portal.
 - Be ready to explain each calculation and edit a boundary case during viva.
+
+
