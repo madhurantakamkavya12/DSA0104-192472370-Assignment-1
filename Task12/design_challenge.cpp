@@ -30,8 +30,8 @@ public:
     long long balance() const { return balance_; }
 };
 int main() {
-    const Pass monthly(Zone::Inner,Zone::Airport);
-    for (const auto [z,hour,weekend] : std::array<std::tuple<Zone,int,bool>,4>{{
+    const Pass monthly(Zone::Inner,Zone::Outer);
+    for (const auto& [z,hour,weekend] : std::array<std::tuple<Zone,int,bool>,4>{{
         {Zone::Airport,9,false},{Zone::Airport,9,true},{Zone::Middle,18,false},{Zone::Inner,12,true}}}) {
         const bool covered=monthly.covers(z);
         std::cout << "covered=" << std::boolalpha << covered << " fare=" << (covered?0:fare(z,hour,weekend)) << "\n";
