@@ -1,9 +1,10 @@
 # DSA01 Assignment 1
 
 - Name: [fill in]
-- Register number: [fill in]
-- Repository name: `DSA01-<RegisterNumber>-Assignment1`
-- Compiler/version: [fill in after checking locally]
+- Register number: 192472370
+- Repository name: `DSA0104-192472370-Assignment-1`
+- Repository URL: https://github.com/madhurantakamkavya12/DSA0104-192472370-Assignment-1
+- Compiler/version: g++ 16.2.0 (MSYS2 UCRT64)
 - Build flags: `-std=c++17 -Wall -Wextra -pedantic`
 
 ## Contents
@@ -40,3 +41,7 @@ The source is prepared but has not been compiled in this workspace because no lo
 3. Compile/run all programs; save input/output evidence in each task folder.
 4. Create a GitHub repository with the required exact name, push these files, and share it with faculty.
 5. Make at least one authentic commit per task over the work period; a single last-day upload does not meet the brief.
+
+
+
+
